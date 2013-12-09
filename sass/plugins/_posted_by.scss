@@ -1,0 +1,38 @@
+ul.editor-profile {
+}
+
+ul.editor-profile > li {
+  border: none;
+  box-shadow: none;
+  float: left;
+}
+
+ul.editor-profile li.avatar {
+  margin-right: 1em;
+}
+
+ul.profile-list {
+  width: 150px;
+  float: left;
+}
+
+ul.profile-list > li {
+  border: none;
+  box-shadow: none;
+  float: none;
+  margin-right: 1em;
+}
+
+ul.profile-list > li.social-icon {
+  float: left;
+}
+
+li.social-icon > a > img {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+}
