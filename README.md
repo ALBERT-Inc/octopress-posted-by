@@ -20,6 +20,11 @@ Usage
 -----
 
 まず、お使いの ``_config.yml`` ファイルの設定項目、 ``default_asides`` に ``custom/asides/posted_by.html`` を追記します。
+Google+ のプロフィール画像を表示させる場合は、加えて Google+ API の呼び出しを有効化した API Key を以下のように追記します。
+
+    # Posted by plugin
+    posted_by:
+      google_api_key: AIzaSyAgtwuTnGLddfsqsSrBHrGDuX5c95DEbwI
 
 続いて、 ``source/_posts/`` ディレクトリの下の各エントリに、著者情報を記述します。
 記述方法は以下の例を参考にしてください。
