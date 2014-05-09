@@ -1,1 +1,9 @@
-{% posted_by %}
+{% if post.author %}
+  {% assign author = post.author %}
+{% elsif page.author %}
+  {% assign author = page.author %}
+{% endif %}
+
+{% if author %}
+  {% posted_by %}
+{% endif %}
