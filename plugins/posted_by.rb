@@ -26,11 +26,12 @@ module Jekyll
       twitter_user = context.get("twitter_user")
       facebook_user = context.get("facebook_user")
       github_user = context.get("github_user")
-      
-      return build_html(author, googleplus_user, twitter_user, facebook_user, github_user)
+      qiita_user = context.get("qiita_user")
+
+      return build_html(author, googleplus_user, twitter_user, facebook_user, github_user, qiita_user)
     end
 
-    def build_html(author, googleplus_user, twitter_user, facebook_user, github_user)
+    def build_html(author, googleplus_user, twitter_user, facebook_user, github_user, qiita_user)
       return <<HTML
   <section>
     <h1>Posted By</h1>
@@ -43,6 +44,7 @@ module Jekyll
             #{build_github_html(github_user)}
             #{build_twitter_html(twitter_user)}
             #{build_facebook_html(facebook_user)}
+            #{build_qiita_html(qiita_user)}
           </ul>
         </li>
       </ul>
@@ -125,6 +127,14 @@ HTML
       return <<HTML
             <li class="social-icon">
               <a href="https://facebook.com/#{facebook_user}"><img src="/images/posted_by/facebook.png" /></a>
+            </li>
+HTML
+    end
+    def build_qiita_html(qiita_user)
+      return "" if !qiita_user
+      return <<HTML
+            <li class="social-icon">
+              <a href="http://qiita.com/#{qiita_user}"><img src="/images/posted_by/qiita.png" /></a>
             </li>
 HTML
     end
